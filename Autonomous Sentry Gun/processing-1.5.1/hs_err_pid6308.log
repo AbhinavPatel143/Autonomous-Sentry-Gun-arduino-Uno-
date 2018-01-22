@@ -1,0 +1,261 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00000000, pid=6308, tid=8140
+#
+# JRE version: 6.0_24-b07
+# Java VM: Java HotSpot(TM) Client VM (19.1-b02 mixed mode windows-x86 )
+# Problematic frame:
+# C  0x00000000
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x18869000):  JavaThread "Animation Thread" [_thread_in_native, id=8140, stack(0x194d0000,0x19520000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x00000000
+
+Registers:
+EAX=0x00000000, EBX=0x145d5728, ECX=0x1b003638, EDX=0x1b004ae8
+ESP=0x1951f998, EBP=0x1951f99c, ESI=0x1af83638, EDI=0x00000000
+EIP=0x00000000, EFLAGS=0x00210246
+
+Register to memory mapping:
+
+EAX=0x00000000
+0x00000000 is pointing to unknown location
+
+EBX=0x145d5728
+{method} 
+ - klass: {other class}
+
+ECX=0x1b003638
+0x1b003638 is pointing to unknown location
+
+EDX=0x1b004ae8
+0x1b004ae8 is pointing to unknown location
+
+ESP=0x1951f998
+0x1951f998 is pointing into the stack for thread: 0x18869000
+"Animation Thread" prio=6 tid=0x18869000 nid=0x1fcc runnable [0x1951f000]
+   java.lang.Thread.State: RUNNABLE
+
+EBP=0x1951f99c
+0x1951f99c is pointing into the stack for thread: 0x18869000
+"Animation Thread" prio=6 tid=0x18869000 nid=0x1fcc runnable [0x1951f000]
+   java.lang.Thread.State: RUNNABLE
+
+ESI=0x1af83638
+0x1af83638 is pointing to unknown location
+
+EDI=0x00000000
+0x00000000 is pointing to unknown location
+
+
+Top of Stack: (sp=0x1951f998)
+0x1951f998:   1ae21835 1951f9fc 1adf27d5 18869000
+0x1951f9a8:   145d5728 1951f9fc 145d5728 145d5728
+0x1951f9b8:   18856fdc 1951f9fc 01f5e60c 00869000
+0x1951f9c8:   1adf121b 01f5e7f2 18869118 1951fa0c
+0x1951f9d8:   00000013 1951f9dc 145d5728 1951fa0c
+0x1951f9e8:   145d83d0 00000000 145d5728 00000000
+0x1951f9f8:   1951fa0c 1951fa30 01f52ea1 00000000
+0x1951fa08:   01f5b809 04155528 1951fa10 145d6f71 
+
+Instructions: (pc=0x00000000)
+0xfffffff0:   
+
+
+Stack: [0x194d0000,0x19520000],  sp=0x1951f998,  free space=318k
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  JMyron.JMyron.native_update()V+0
+j  JMyron.JMyron.update()V+1
+j  PSG_Processing_Code.setup()V+86
+j  processing.core.PApplet.handleDraw()V+65
+j  processing.core.PApplet.run()V+72
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x19055c00 JavaThread "Thread-24" [_thread_blocked, id=5536, stack(0x1ada0000,0x1adf0000)]
+  0x19052800 JavaThread "Thread-23" [_thread_blocked, id=5348, stack(0x1ad10000,0x1ad60000)]
+  0x19055000 JavaThread "Thread-22" [_thread_blocked, id=6844, stack(0x1ac80000,0x1acd0000)]
+  0x19055800 JavaThread "Thread-21" [_thread_blocked, id=7176, stack(0x1abf0000,0x1ac40000)]
+  0x19053800 JavaThread "Thread-20" [_thread_blocked, id=8028, stack(0x1ab60000,0x1abb0000)]
+  0x19052000 JavaThread "Thread-19" [_thread_blocked, id=6344, stack(0x1a6d0000,0x1a720000)]
+  0x19051c00 JavaThread "Thread-18" [_thread_blocked, id=8124, stack(0x1a640000,0x1a690000)]
+  0x1903e800 JavaThread "Thread-17" [_thread_blocked, id=3448, stack(0x1a5b0000,0x1a600000)]
+  0x1903e000 JavaThread "Thread-16" [_thread_blocked, id=5932, stack(0x1a520000,0x1a570000)]
+  0x19041000 JavaThread "Thread-15" [_thread_blocked, id=4332, stack(0x1a490000,0x1a4e0000)]
+  0x19040c00 JavaThread "Thread-14" [_thread_blocked, id=7140, stack(0x1a400000,0x1a450000)]
+  0x19040400 JavaThread "Thread-13" [_thread_blocked, id=6380, stack(0x1a370000,0x1a3c0000)]
+  0x19040000 JavaThread "Thread-12" [_thread_blocked, id=7204, stack(0x1a2e0000,0x1a330000)]
+  0x1903ec00 JavaThread "Thread-11" [_thread_blocked, id=1464, stack(0x1a250000,0x1a2a0000)]
+  0x1903f800 JavaThread "Thread-10" [_thread_blocked, id=7284, stack(0x1a0c0000,0x1a110000)]
+  0x1903f400 JavaThread "Thread-9" [_thread_blocked, id=5728, stack(0x1a030000,0x1a080000)]
+  0x1903dc00 JavaThread "Thread-8" [_thread_blocked, id=7408, stack(0x19da0000,0x19df0000)]
+  0x188b4c00 JavaThread "Thread-7" [_thread_blocked, id=3040, stack(0x19d10000,0x19d60000)]
+  0x188b4800 JavaThread "Thread-6" [_thread_blocked, id=1404, stack(0x19c80000,0x19cd0000)]
+  0x19021400 JavaThread "Thread-5" [_thread_blocked, id=7384, stack(0x19be0000,0x19c30000)]
+  0x19020c00 JavaThread "Thread-4" [_thread_blocked, id=6372, stack(0x19b50000,0x19ba0000)]
+  0x18900c00 JavaThread "Java Sound Event Dispatcher" daemon [_thread_blocked, id=3752, stack(0x19750000,0x197a0000)]
+=>0x18869000 JavaThread "Animation Thread" [_thread_in_native, id=8140, stack(0x194d0000,0x19520000)]
+  0x1887c000 JavaThread "Image Fetcher 0" daemon [_thread_blocked, id=4260, stack(0x198e0000,0x19930000)]
+  0x18861000 JavaThread "AWT-EventQueue-0" [_thread_blocked, id=3912, stack(0x19440000,0x19490000)]
+  0x188e2000 JavaThread "AWT-Windows" daemon [_thread_in_native, id=5700, stack(0x18fb0000,0x19000000)]
+  0x188e0c00 JavaThread "AWT-Shutdown" [_thread_blocked, id=5272, stack(0x18f20000,0x18f70000)]
+  0x188df400 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=7932, stack(0x18e90000,0x18ee0000)]
+  0x01c1a000 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=5320, stack(0x18660000,0x186b0000)]
+  0x01c0f800 JavaThread "CompilerThread0" daemon [_thread_blocked, id=4212, stack(0x185d0000,0x18620000)]
+  0x01bff800 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=2448, stack(0x18540000,0x18590000)]
+  0x01bfb400 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=4716, stack(0x184b0000,0x18500000)]
+  0x01bf6800 JavaThread "JDWP Transport Listener: dt_shmem" daemon [_thread_blocked, id=7656, stack(0x18420000,0x18470000)]
+  0x01bec800 JavaThread "Attach Listener" daemon [_thread_blocked, id=6364, stack(0x18390000,0x183e0000)]
+  0x01beb800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=3940, stack(0x18300000,0x18350000)]
+  0x01bce000 JavaThread "Finalizer" daemon [_thread_blocked, id=2076, stack(0x18270000,0x182c0000)]
+  0x01bcc800 JavaThread "Reference Handler" daemon [_thread_blocked, id=1528, stack(0x181e0000,0x18230000)]
+  0x002cc000 JavaThread "main" [_thread_blocked, id=5424, stack(0x00260000,0x002b0000)]
+
+Other Threads:
+  0x01bc9000 VMThread [stack: 0x18150000,0x181a0000] [id=7292]
+  0x01c24c00 WatcherThread [stack: 0x186f0000,0x18740000] [id=6564]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 4928K, used 2039K [0x03fd0000, 0x04520000, 0x09520000)
+  eden space 4416K,  35% used [0x03fd0000, 0x04158550, 0x04420000)
+  from space 512K,  91% used [0x04420000, 0x044958d8, 0x044a0000)
+  to   space 512K,   0% used [0x044a0000, 0x044a0000, 0x04520000)
+ tenured generation   total 10944K, used 3861K [0x09520000, 0x09fd0000, 0x13fd0000)
+   the space 10944K,  35% used [0x09520000, 0x098e55c8, 0x098e5600, 0x09fd0000)
+ compacting perm gen  total 12288K, used 6177K [0x13fd0000, 0x14bd0000, 0x17fd0000)
+   the space 12288K,  50% used [0x13fd0000, 0x145d8678, 0x145d8800, 0x14bd0000)
+No shared spaces configured.
+
+Dynamic libraries:
+0x00400000 - 0x00424000 	C:\Users\Welcome\Desktop\sentry gun project\processing-1.5.1\java\bin\java.exe
+0x77ba0000 - 0x77d07000 	C:\Windows\SYSTEM32\ntdll.dll
+0x774e0000 - 0x77620000 	C:\Windows\SYSTEM32\KERNEL32.DLL
+0x77a00000 - 0x77ad0000 	C:\Windows\SYSTEM32\KERNELBASE.dll
+0x738c0000 - 0x73959000 	C:\Windows\system32\apphelp.dll
+0x6e7a0000 - 0x6e9f9000 	C:\Windows\AppPatch\AcGenral.DLL
+0x75780000 - 0x7583e000 	C:\Windows\SYSTEM32\msvcrt.dll
+0x774a0000 - 0x774de000 	C:\Windows\SYSTEM32\sechost.dll
+0x755b0000 - 0x755cd000 	C:\Windows\SYSTEM32\SspiCli.dll
+0x75730000 - 0x75771000 	C:\Windows\SYSTEM32\SHLWAPI.dll
+0x71a70000 - 0x71b4b000 	C:\Windows\SYSTEM32\UxTheme.dll
+0x76e90000 - 0x76fdc000 	C:\Windows\SYSTEM32\USER32.dll
+0x76b50000 - 0x76c57000 	C:\Windows\SYSTEM32\GDI32.dll
+0x737a0000 - 0x737c0000 	C:\Windows\SYSTEM32\WINMM.dll
+0x72190000 - 0x721a2000 	C:\Windows\SYSTEM32\samcli.dll
+0x76d80000 - 0x76e8c000 	C:\Windows\SYSTEM32\ole32.dll
+0x772d0000 - 0x77365000 	C:\Windows\SYSTEM32\OLEAUT32.dll
+0x72f70000 - 0x72f85000 	C:\Windows\SYSTEM32\MSACM32.dll
+0x75250000 - 0x75258000 	C:\Windows\SYSTEM32\VERSION.dll
+0x75840000 - 0x769f7000 	C:\Windows\SYSTEM32\SHELL32.dll
+0x74bb0000 - 0x74bc9000 	C:\Windows\SYSTEM32\USERENV.dll
+0x73670000 - 0x73688000 	C:\Windows\SYSTEM32\dwmapi.dll
+0x716b0000 - 0x717fa000 	C:\Windows\SYSTEM32\urlmon.dll
+0x778a0000 - 0x77918000 	C:\Windows\SYSTEM32\ADVAPI32.dll
+0x73290000 - 0x732ee000 	C:\Windows\SYSTEM32\WINSPOOL.DRV
+0x73690000 - 0x736a4000 	C:\Windows\SYSTEM32\MPR.dll
+0x77920000 - 0x779d0000 	C:\Windows\SYSTEM32\RPCRT4.dll
+0x755a0000 - 0x755a9000 	C:\Windows\SYSTEM32\CRYPTBASE.dll
+0x755e0000 - 0x7572e000 	C:\Windows\SYSTEM32\combase.dll
+0x73350000 - 0x73370000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x74b90000 - 0x74b9e000 	C:\Windows\SYSTEM32\profapi.dll
+0x74bd0000 - 0x74e02000 	C:\Windows\SYSTEM32\iertutil.dll
+0x74f50000 - 0x75126000 	C:\Windows\SYSTEM32\WININET.dll
+0x75540000 - 0x75592000 	C:\Windows\SYSTEM32\bcryptPrimitives.dll
+0x76d20000 - 0x76d5a000 	C:\Windows\SYSTEM32\cfgmgr32.dll
+0x73320000 - 0x7333f000 	C:\Windows\SYSTEM32\DEVOBJ.dll
+0x73a90000 - 0x73b06000 	C:\Windows\SYSTEM32\SHCORE.DLL
+0x779d0000 - 0x779f5000 	C:\Windows\system32\IMM32.DLL
+0x77620000 - 0x77717000 	C:\Windows\SYSTEM32\MSCTF.dll
+0x7c340000 - 0x7c396000 	C:\Users\Welcome\Desktop\sentry gun project\processing-1.5.1\java\bin\msvcr71.dll
+0x6d8a0000 - 0x6db46000 	C:\Users\Welcome\Desktop\sentry gun project\processing-1.5.1\java\bin\client\jvm.dll
+0x6d850000 - 0x6d85c000 	C:\Users\Welcome\Desktop\sentry gun project\processing-1.5.1\java\bin\verify.dll
+0x6d3d0000 - 0x6d3ef000 	C:\Users\Welcome\Desktop\sentry gun project\processing-1.5.1\java\bin\java.dll
+0x6d330000 - 0x6d338000 	C:\Users\Welcome\Desktop\sentry gun project\processing-1.5.1\java\bin\hpi.dll
+0x77060000 - 0x77066000 	C:\Windows\SYSTEM32\PSAPI.DLL
+0x6d420000 - 0x6d449000 	C:\Users\Welcome\Desktop\sentry gun project\processing-1.5.1\java\bin\jdwp.dll
+0x6d740000 - 0x6d746000 	C:\Users\Welcome\Desktop\sentry gun project\processing-1.5.1\java\bin\npt.dll
+0x6d890000 - 0x6d89f000 	C:\Users\Welcome\Desktop\sentry gun project\processing-1.5.1\java\bin\zip.dll
+0x6d2a0000 - 0x6d2a8000 	C:\Users\Welcome\Desktop\sentry gun project\processing-1.5.1\java\bin\dt_shmem.dll
+0x6d0b0000 - 0x6d1fa000 	C:\Users\Welcome\Desktop\sentry gun project\processing-1.5.1\java\bin\awt.dll
+0x71b60000 - 0x71d46000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9600.17031_none_a9efdb8b01377ea7\COMCTL32.dll
+0x72f30000 - 0x72f39000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x6d2e0000 - 0x6d32f000 	C:\Users\Welcome\Desktop\sentry gun project\processing-1.5.1\java\bin\fontmanager.dll
+0x6d5c0000 - 0x6d5e4000 	C:\Users\Welcome\Desktop\sentry gun project\processing-1.5.1\java\bin\jsound.dll
+0x6d5f0000 - 0x6d5f8000 	C:\Users\Welcome\Desktop\sentry gun project\processing-1.5.1\java\bin\jsoundds.dll
+0x6d6c0000 - 0x6d739000 	C:\Windows\SYSTEM32\DSOUND.dll
+0x74070000 - 0x740ae000 	C:\Windows\SYSTEM32\POWRPROF.dll
+0x71e50000 - 0x71e9a000 	C:\Windows\SYSTEM32\MMDevAPI.DLL
+0x71e10000 - 0x71e44000 	C:\Windows\SYSTEM32\wdmaud.drv
+0x6d3a0000 - 0x6d3a7000 	C:\Windows\SYSTEM32\ksuser.dll
+0x6d370000 - 0x6d379000 	C:\Windows\SYSTEM32\AVRT.dll
+0x71db0000 - 0x71e10000 	C:\Windows\SYSTEM32\AUDIOSES.DLL
+0x72f60000 - 0x72f69000 	C:\Windows\SYSTEM32\msacm32.drv
+0x72f50000 - 0x72f58000 	C:\Windows\SYSTEM32\midimap.dll
+0x76fe0000 - 0x7705d000 	C:\Windows\SYSTEM32\clbcatq.dll
+0x1adf0000 - 0x1ae0b000 	C:\Users\Welcome\Documents\Processing\libraries\JMyron\library\JMyron.dll
+0x1ae20000 - 0x1ae34000 	C:\Users\Welcome\Desktop\sentry gun project\processing-1.5.1\myron_ezcam.dll
+0x1ae40000 - 0x1ae53000 	C:\Users\Welcome\Desktop\sentry gun project\processing-1.5.1\DSVL.dll
+0x718f0000 - 0x71a6b000 	C:\Windows\SYSTEM32\QUARTZ.dll
+0x7c3a0000 - 0x7c41b000 	C:\Windows\SYSTEM32\MSVCP71.dll
+0x718b0000 - 0x718e1000 	C:\Windows\SYSTEM32\qcap.dll
+0x72f00000 - 0x72f22000 	C:\Windows\SYSTEM32\MSVFW32.dll
+0x6f880000 - 0x6f8fb000 	C:\Windows\SYSTEM32\qedit.dll
+0x77380000 - 0x7740a000 	C:\Windows\SYSTEM32\COMDLG32.dll
+0x730e0000 - 0x7322d000 	C:\Windows\WinSxS\x86_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.9600.17227_none_dad9452e5bcb7986\gdiplus.dll
+0x71ee0000 - 0x71ef3000 	C:\Windows\SYSTEM32\devenum.dll
+0x77120000 - 0x772cd000 	C:\Windows\SYSTEM32\setupapi.dll
+0x732f0000 - 0x73315000 	C:\Windows\SYSTEM32\ntmarta.dll
+0x77080000 - 0x770b8000 	C:\Windows\SYSTEM32\WINTRUST.dll
+0x77720000 - 0x7789f000 	C:\Windows\SYSTEM32\CRYPT32.dll
+0x77070000 - 0x7707e000 	C:\Windows\SYSTEM32\MSASN1.dll
+0x72f40000 - 0x72f4b000 	C:\Windows\SYSTEM32\msdmo.dll
+0x71870000 - 0x718a6000 	C:\Windows\SYSTEM32\ksproxy.ax
+0x6ebb0000 - 0x6ed68000 	C:\Windows\SYSTEM32\d3d9.dll
+0x72320000 - 0x7232a000 	C:\Windows\SYSTEM32\vidcap.ax
+0x71d50000 - 0x71d6d000 	C:\Windows\SYSTEM32\kswdmcap.ax
+0x6e690000 - 0x6e794000 	C:\Windows\SYSTEM32\MFC42.dll
+0x6e5f0000 - 0x6e68f000 	C:\Windows\SYSTEM32\ODBC32.dll
+0x71da0000 - 0x71daa000 	C:\Windows\SYSTEM32\msyuv.dll
+
+VM Arguments:
+jvm_args: -Xrunjdwp:transport=dt_shmem,address=127.0.0.1:8030,suspend=y -Djava.library.path=;C:\Users\Welcome\Documents\Processing\libraries\JMyron\library;C:\Users\Welcome\Documents\Processing\libraries\blobDetection\library;C:\Users\Welcome\Desktop\sentry gun project\processing-1.5.1\modes\java\libraries\serial\library\windows32;C:\Users\Welcome\Desktop\sentry gun project\processing-1.5.1\modes\java\libraries\minim\library;C:\Users\Welcome\Desktop\sentry gun project\processing-1.5.1\modes\java\libraries\opengl\library\windows32;C:\Users\Welcome\Documents\Processing\libraries\procontroll\library;C:\Users\Welcome\Documents\Processing\libraries\guicomponents\library;C:\Users\Welcome\Desktop\sentry gun project\processing-1.5.1\java\bin;.;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Broadcom\Broadcom 802.11;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files\Hewlett-Packard\SimplePass;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Common Files\Adobe\AGL;C:\Program Files\PTC\Creo Elements\Pro5.0\bin;C:\Program Files\PTC\Creo Elements\Pro5.0\bin;C:\Program Files\PTC\Creo Elements\Pro5.0\bin;C:\adb;C:\Users\Welcome\Desktop\sentry gun project\processing-1.5.1\java\bin -ea 
+java_command: processing.core.PApplet --location=58,58 --external --display=-1 --sketch-path=C:\Users\Welcome\Desktop\sentry gun project\Project-Sentry-Gun-master\Processing\PSG_Processing_Code PSG_Processing_Code
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\Python27\;C:\Python27\Scripts;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Broadcom\Broadcom 802.11;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Hewlett-Packard\SimplePass\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Common Files\Adobe\AGL;C:\Program Files\PTC\Creo Elements\Pro5.0\bin;C:\Program Files\PTC\Creo Elements\Pro5.0\bin;C:\Program Files\PTC\Creo Elements\Pro5.0\bin;C:\adb;C:\Users\Welcome\AppData\Roaming\Python\Scripts;C:\Users\Welcome\Desktop\sentry gun project\processing-1.5.1\java\bin
+USERNAME=Welcome
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 69 Stepping 1, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows NT 6.2 Build 9200 
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 69 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 4122776k(2662084k free), swap 4843672k(2834776k free)
+
+vm_info: Java HotSpot(TM) Client VM (19.1-b02) for windows-x86 JRE (1.6.0_24-b07), built on Feb  2 2011 17:44:41 by "java_re" with MS VC++ 7.1 (VS2003)
+
+time: Tue Mar 21 13:17:03 2017
+elapsed time: 1 seconds
+

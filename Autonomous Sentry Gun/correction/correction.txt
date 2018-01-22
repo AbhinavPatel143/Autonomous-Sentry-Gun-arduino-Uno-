@@ -1,0 +1,4 @@
+*Note :- If you dont encounter any error while running code in processing dont follow below step.
+MSVCP71.DLL and Msvcr71.dll
+or Windows 32-bit OS: put both dll files inside Windows/System32 folder
+For Windows 64-bit OS: put both dll files inside Windows/SysWOW64 folder.

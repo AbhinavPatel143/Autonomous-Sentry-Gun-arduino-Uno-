@@ -1,0 +1,28 @@
+1)  install processing and arduino.
+
+2) Open "processing libraries" folder copy the  4 folders to processing folder in  My Documents folder.
+
+3) Copy myron_ezcam.dll and DSVL.dll to the processing-1.5.1 folder.
+   note- copy only when you face error while running processing code.
+
+4) Open PSG_Arduino_Code.txt and copy to the Arduino IDE.
+
+5) Make sure that you have connected all your servo motor correctly to arduino uno.
+
+6) Upload the code to Arduino.
+
+7) Make sure that your webcam drivers are installed and working.
+  If you are using your laptop make sure that you disable your laptop's wedcam in device manager
+  or you laptop webcam will be switch on.
+
+8) Plug in your webcam and microcontroller.
+
+9) Finally, open PSG_Processing_Code_minimal folder and open PSG_Processing_Code_Minimal. . Click run.
+ 
+
+
+
+
+
+
+
